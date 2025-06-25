@@ -16,7 +16,7 @@ export async function getServerSideProps() {
   let reviews:Review[] = [];
   let products:ProductsResponse|undefined;
 
-  const reviewRes = await fetch(URL+`api/reviews`, {
+  const reviewRes = await fetch(URL+`/api/reviews`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
