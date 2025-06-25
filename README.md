@@ -2,7 +2,11 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 # Тестовое задание тг @rokkit_ceo
 ## Как открыть
 
-First, run the development server:
+Демо на https://test-o-complex-omega.vercel.app/
+
+В data.config.ts замените домен на домен сервера
+
+Для того, чтобы все фотографии загрузились используйте VPN
 
 ```bash
 npm run dev
@@ -44,5 +48,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Какие бы ввел доработки
 
 Я бы еще добавил в текст модалки текст из ответа от сервера.
+
 Добавил бы пагинацию по страницам
+
 Переключение темы
