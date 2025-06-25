@@ -31,7 +31,7 @@ export function Products({data}:{data:ProductsResponse}){
     };
 
     async function getMore(currentPage:number, staticProducts:Product[]) {
-      const res = await fetch(`http://localhost:3000/api/products?page=${page}&page_size=20`, {
+      const res = await fetch(URL+`/api/products?page=${page}&page_size=20`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
@@ -48,7 +48,7 @@ export function Products({data}:{data:ProductsResponse}){
     }
 
     async function changePerPage() {
-      const res = await fetch(`http://localhost:3000/api/products?page=1&page_size=${perPage}`, {
+      const res = await fetch(URL+`/api/products?page=1&page_size=${perPage}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
@@ -72,7 +72,7 @@ export function Products({data}:{data:ProductsResponse}){
         quantity: item.quantity
       }));
       
-      let response = await fetch('http://localhost:3000/api/order', {
+      let response = await fetch(URL+'/api/order', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

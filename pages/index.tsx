@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Review, Product, ProductsResponse } from "@/lib/types";
 import { Reviews } from "@/components/Reviews"
 import { Products } from "@/components/Products"
+import {URL} from "@/data.config"
 
 
 
@@ -15,7 +16,7 @@ export async function getServerSideProps() {
   let reviews:Review[] = [];
   let products:ProductsResponse|undefined;
 
-  const reviewRes = await fetch(`http://localhost:3000/api/reviews`, {
+  const reviewRes = await fetch(URL+`api/reviews`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
@@ -26,7 +27,7 @@ export async function getServerSideProps() {
     reviews = await reviewRes.json();
   }
 
-  const productRes = await fetch(`http://localhost:3000/api/products?page=1&page_size=20`, {
+  const productRes = await fetch(URL+`/api/products?page=1&page_size=20`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
