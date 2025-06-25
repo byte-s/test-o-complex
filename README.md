@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
-
-## Getting Started
+# Тестовое задание тг @rokkit_ceo
+## Как открыть
 
 First, run the development server:
 
@@ -16,25 +16,33 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Что было сделано
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- ~~визуал по фигме [https://www.figma.com/file/XIYVl8ICFkdl3HJZcc8o8B/тестовое?type=design&node-id=0%3A1&mode=design&t=6xUI2e3VtlUzDocD-1](https://www.figma.com/file/XIYVl8ICFkdl3HJZcc8o8B/%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5?type=design&node-id=0%3A1&mode=design&t=6xUI2e3VtlUzDocD-1)~~
+- ~~должен быть адаптирован под мобильные устройства и планшеты~~
+- ~~наполнение контентом отзывов из html обернутого в json~~
+- ~~наполнение контентом товары по апи~~
+    - ~~показывать первую страницу сразу~~
+    - ~~остальные страницы подгружать ajax запросом, по мере прокрутки вниз~~
+- ~~при нажатии на кнопку "купить", она должна меняться на кнопки + и - и поле для ввода кол-ва товара, значение поля должно быть 1, кнопки должны добавлять отбавлять товар, так же должна быть возможность вписать в поле для ввода любое кол-во.~~
+- ~~при изменении кол-ва какого-либо из товаров должна меняться информация в корзине (та что над полем с телефоном)~~
+- ~~набранные товары и введенный номер телефона должны сохраняться при перезагрузки страницы~~
+- ~~маска в поле для телефона~~
+- ~~при нажатии кнопки "заказать" идет проверка того что телефон полностью введен~~
+    - ~~если всё хорошо - отправлять запрос на сервер~~
+    - ~~если есть ошибки - подсветить соответствующие поля красным (поле номера телефона)~~
+- ~~после отправки запроса и получения ответа от сервера отобразить попап что всё успешно (сделать попап в стиле самого сайта)~~
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+всё из выше перечисленного делать не обязательно, но чем больше - тем лучше.
+помимо исполнения конкретных пунктов тз тк же будет ценится:
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- проявлении инициативы по улучшению ux на месте. например добавить прилоадеры пока грузится контент.
+- отказоустойчивость. например пофиксить xss атаку через контент отзывов, учесть возможность того что название товара может быть длиннее чем в дизайне.
+- ~~скорость загрузки сайта и скорость появления там контента (рекомендуется ssr)~~
+- читабельность/поддерживаемость/расширяемость кода
 
-## Learn More
+## Какие бы ввел доработки
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Я бы еще добавил в текст модалки текст из ответа от сервера.
+Добавил бы пагинацию по страницам
+Переключение темы
